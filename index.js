@@ -1,4 +1,4 @@
 // Jednotlive soubory se importuji pomoci syntaxe  import 'cesta k souboru';
-import './ukoly/cykly/for/4.js';
+import './ukoly/pole/1.js';
 
 // pokud chci spustit jiny ukol zmenim import - napriklad na import './ukoly/promenne/2.js' a uložím;

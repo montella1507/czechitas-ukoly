@@ -1,38 +1,24 @@
 /*
  Zadání
+ vytvořte staticky pomoci = [1,2,3, 4543, 4, 34]
+ pole a najděte v něm nejmenší a největší číslo
 
- Nechte uživatele zadávat čísla do pole, dokud nezadá číslo 0. Po dokončení zadávání, nalezněte v poli nejmenší zadané číslo
-- prompt ve whileu.. lze vyuzit predchozi udelany kod.. 
-- po dozadavani pomoci FOR cyklu projedte cele pole a najdete nejmensi...
-- pri hledani nejmensiho si predpokladejte ze hned prvni prvek je nejmensi
+ TIP:
+ - využijte for cyklus
+ - budete si potřebovat ukládat největší a nejmenší číslo
+ - predpokladejte na zacatku ze nejmensi i nejvetsi je prvni cislo v poli (pole[0])
 */
 
-
 // Načteme první číslo
-let cislo = Number(prompt("Zadej:"));
+let pole = [3, 4, 787, 233, -26];
+let nejmensi = pole[0];
+let nejvetsi = pole[0];
 
-// Vytvoříme si prázdné pole
-let arr = [];
-
-
-// Dokud nezadá 0
-while (cislo != 0) {
-  // přidáme zadané číslo do pole
-   arr.push(cislo);
-   // Načteme nové
-   cislo = Number(prompt("Zadej:"));
+for (let i = 0; i < pole.length; i++) {
+  if (nejmensi > pole[i]) {
+    nejmensi = pole[i];
+  }
 }
 
-// předpokládáme, že nejmenší číslo je to první
-let nejmensi = arr[0];
-
-// projíždíme celé pole
-for (let i = 0; i < arr.length; i++) {
-
-  // pokud je "aktuální číslo v poli" menší než prozatimní "nejmenší" tak nejmenší přenastavíme
- if (nejmensi > arr[i]) {
-    nejmensi = arr[i];
- }
-}
-
-console.log("Nejmenší číslo je: " + nejmensi );
+console.log('Nejmenší číslo je: ' + nejmensi);
+console.log('Největší číslo je: ' + nejvetsi);
