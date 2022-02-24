@@ -5,20 +5,22 @@ Zadání
 */
 
 // Je potřeba poprvé načíst číslo, ať se máme čím řídit pro první iteraci cyklu
-let cislo = Number(prompt("Zadej:"));
+let cislo = Number(prompt('Zadej:'));
 
 // Akumulační součet - do něj budeme přičítat
 let soucet = 0;
 
 // Dokud platí podmínka že uživatel nezadal 0, tak opakujeme cyklus
 while (cislo != 0) {
+  console.log('Vstup:' + cislo);
   // přičteme zadané číslo do součku
-   soucet += cislo;
+  soucet += cislo;
+  // vypíšeme součet
+  console.log('Naakumulovany soucet:' + soucet);
+  // znovu načteme nové číslo
+  cislo = Number(prompt('Zadej:'));
 
-   // znovu načteme nové číslo
-   cislo = Number(prompt("Zadej:"));
-   // vypíšeme součet
-   console.log("Naakumulovany soucet:" + soucet);
-
-   // jedeme odznovu while cyklus - další iteraci
+  // jedeme odznovu while cyklus - další iteraci
 }
+
+console.log('Finalni soucet:' + soucet);
